@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Quizly — a timed, multiple-choice quiz app built with vanilla JavaScript." />
+  <title>Quizly — Quiz App</title>
+  <meta name="theme-color" content="#6366f1" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%236366f1'/%3E%3Ctext x='32' y='45' font-family='Arial' font-size='38' font-weight='bold' fill='white' text-anchor='middle'%3EQ%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <!-- Start screen -->
+    <section id="start-screen" class="screen is-active" aria-labelledby="app-title">
+      <div class="card start-card">
+        <div class="logo" aria-hidden="true">Q</div>
+        <p class="eyebrow">Knowledge quiz</p>
+        <h1 id="app-title">Quizly</h1>
+        <p class="lede">Pick a category, beat the clock, and see how many you can get right.</p>
+        <p class="best-score" id="best-score" hidden></p>
+
+        <fieldset class="category-fieldset">
+          <legend>Choose a category</legend>
+          <div class="chips" id="category-chips"></div>
+        </fieldset>
+
+        <button class="btn btn-primary" id="start-btn" type="button">Start quiz</button>
+        <p class="hint">15 seconds per question &middot; press <kbd>1</kbd>&ndash;<kbd>4</kbd> to answer</p>
+      </div>
+    </section>
+
+    <!-- Quiz screen -->
+    <section id="quiz-screen" class="screen" aria-labelledby="question-text">
+      <div class="quiz-top">
+        <span class="quiz-count" id="question-count">Question 1 of 10</span>
+        <span class="score-pill" id="score-live">Score 0</span>
+      </div>
+
+      <div class="card quiz-card">
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+        <div class="timer-row">
+          <span class="timer-label">Time</span>
+          <div class="timer-track" role="timer" aria-label="Time remaining for this question">
+            <div class="timer-fill" id="timer-fill"></div>
+          </div>
+          <span class="timer-value" id="timer-value">15s</span>
+        </div>
+
+        <p class="category-label" id="question-category">Science</p>
+        <h2 class="question-text" id="question-text" tabindex="-1"></h2>
+
+        <div class="options" id="options"></div>
+
+        <div class="feedback" id="feedback" aria-live="polite" hidden>
+          <p class="feedback-title" id="feedback-title"></p>
+          <p class="feedback-text" id="feedback-text"></p>
+        </div>
+
+        <button class="btn btn-primary" id="next-btn" type="button" hidden>Next question</button>
+      </div>
+    </section>
+
+    <!-- Result screen -->
+    <section id="result-screen" class="screen" aria-labelledby="result-title">
+      <div class="card result-card">
+        <p class="eyebrow">Quiz complete</p>
+
+        <div class="score-ring" id="score-ring">
+          <div class="score-ring-inner">
+            <span class="score-percent" id="score-percent">0%</span>
+            <small class="score-fraction" id="score-fraction">0 / 0</small>
+          </div>
+        </div>
+
+        <h2 class="result-title" id="result-title" tabindex="-1">Nice work!</h2>
+        <p class="result-message" id="result-message"></p>
+        <p class="new-best" id="new-best" hidden>New personal best</p>
+
+        <div class="result-stats">
+          <div class="stat"><strong id="stat-correct">0</strong><span>Correct</span></div>
+          <div class="stat"><strong id="stat-wrong">0</strong><span>Incorrect</span></div>
+          <div class="stat"><strong id="stat-best">0%</strong><span>Personal best</span></div>
+        </div>
+
+        <div class="review" id="review"></div>
+
+        <div class="result-actions">
+          <button class="btn btn-primary" id="again-btn" type="button">Play again</button>
+          <button class="btn btn-ghost" id="home-btn" type="button">Change category</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

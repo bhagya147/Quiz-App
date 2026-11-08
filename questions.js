@@ -1,0 +1,228 @@
+/* Question bank for Quizly.
+   `answer` must exactly match one of the entries in `options`. */
+const QUESTIONS = [
+  // ---------- Science ----------
+  {
+    category: "Science",
+    question: "Which planet is known as the Red Planet?",
+    options: ["Venus", "Mars", "Jupiter", "Mercury"],
+    answer: "Mars",
+    explanation: "Mars looks red because its surface is covered in iron oxide — basically rust.",
+  },
+  {
+    category: "Science",
+    question: "What is the chemical symbol for gold?",
+    options: ["Ag", "Au", "Fe", "Gd"],
+    answer: "Au",
+    explanation: "Au comes from the Latin word aurum, meaning gold. Ag is silver and Fe is iron.",
+  },
+  {
+    category: "Science",
+    question: "Which is the largest organ of the human body?",
+    options: ["The liver", "The brain", "The skin", "The lungs"],
+    answer: "The skin",
+    explanation: "The skin is the body's largest organ, covering roughly 1.5 to 2 square metres in adults.",
+  },
+  {
+    category: "Science",
+    question: "Which gas do plants absorb from the air during photosynthesis?",
+    options: ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
+    answer: "Carbon dioxide",
+    explanation: "Plants take in carbon dioxide and release oxygen as a by-product of photosynthesis.",
+  },
+  {
+    category: "Science",
+    question: "Roughly how fast does light travel in a vacuum?",
+    options: ["30,000 km/s", "300,000 km/s", "3,000,000 km/s", "300 km/s"],
+    answer: "300,000 km/s",
+    explanation: "Light travels at about 299,792 kilometres per second — around 300,000 km/s.",
+  },
+  {
+    category: "Science",
+    question: "What is the hardest naturally occurring substance on Earth?",
+    options: ["Quartz", "Titanium", "Diamond", "Granite"],
+    answer: "Diamond",
+    explanation: "Diamond tops the Mohs hardness scale at 10 thanks to its rigid carbon lattice.",
+  },
+
+  // ---------- History ----------
+  {
+    category: "History",
+    question: "Who was the first person to walk on the Moon?",
+    options: ["Buzz Aldrin", "Yuri Gagarin", "Neil Armstrong", "Michael Collins"],
+    answer: "Neil Armstrong",
+    explanation: "Neil Armstrong stepped onto the Moon on 20 July 1969 during the Apollo 11 mission.",
+  },
+  {
+    category: "History",
+    question: "Which ancient civilization built the pyramids at Giza?",
+    options: ["The Romans", "The Greeks", "The Aztecs", "The Egyptians"],
+    answer: "The Egyptians",
+    explanation: "The pyramids at Giza were built by the ancient Egyptians around 4,500 years ago.",
+  },
+  {
+    category: "History",
+    question: "In which year did the Second World War end?",
+    options: ["1939", "1942", "1945", "1950"],
+    answer: "1945",
+    explanation: "The Second World War ended in 1945, with Germany surrendering in May and Japan in September.",
+  },
+  {
+    category: "History",
+    question: "Who was the first President of the United States?",
+    options: ["Thomas Jefferson", "George Washington", "John Adams", "Abraham Lincoln"],
+    answer: "George Washington",
+    explanation: "George Washington took office in 1789 and served two terms as the first U.S. President.",
+  },
+  {
+    category: "History",
+    question: "In which year did the Titanic sink?",
+    options: ["1905", "1912", "1918", "1923"],
+    answer: "1912",
+    explanation: "The Titanic struck an iceberg and sank on its maiden voyage in April 1912.",
+  },
+  {
+    category: "History",
+    question: "Who was the principal author of the U.S. Declaration of Independence?",
+    options: ["Benjamin Franklin", "Thomas Jefferson", "James Madison", "John Hancock"],
+    answer: "Thomas Jefferson",
+    explanation: "Thomas Jefferson drafted the Declaration, which was adopted on 4 July 1776.",
+  },
+
+  // ---------- Geography ----------
+  {
+    category: "Geography",
+    question: "Which is the largest ocean on Earth?",
+    options: ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+    answer: "Pacific Ocean",
+    explanation: "The Pacific Ocean covers about one third of Earth's surface — more than all land combined.",
+  },
+  {
+    category: "Geography",
+    question: "What is the capital of Japan?",
+    options: ["Kyoto", "Osaka", "Tokyo", "Nagoya"],
+    answer: "Tokyo",
+    explanation: "Tokyo has been Japan's capital since 1868 and is one of the world's largest metropolitan areas.",
+  },
+  {
+    category: "Geography",
+    question: "Which river is traditionally considered the longest in the world?",
+    options: ["Amazon", "Nile", "Yangtze", "Mississippi"],
+    answer: "Nile",
+    explanation: "The Nile is usually listed at about 6,650 km, though some measurements put the Amazon close behind.",
+  },
+  {
+    category: "Geography",
+    question: "On which continent is the Sahara Desert located?",
+    options: ["Asia", "Australia", "Africa", "South America"],
+    answer: "Africa",
+    explanation: "The Sahara stretches across northern Africa and is the largest hot desert in the world.",
+  },
+  {
+    category: "Geography",
+    question: "Which country is known as the Land of the Rising Sun?",
+    options: ["China", "Japan", "Thailand", "South Korea"],
+    answer: "Japan",
+    explanation: "The name Japan comes from 'Nihon', which means 'origin of the sun'.",
+  },
+  {
+    category: "Geography",
+    question: "Mount Everest sits on the border between Nepal and which other country?",
+    options: ["India", "Bhutan", "China", "Pakistan"],
+    answer: "China",
+    explanation: "Everest lies on the Nepal–China border, with the north side in China's Tibet region.",
+  },
+
+  // ---------- Technology ----------
+  {
+    category: "Technology",
+    question: "What does HTML stand for?",
+    options: [
+      "HyperText Markup Language",
+      "Home Tool Markup Language",
+      "High Tech Modern Language",
+      "Hyperlink Text Making Language",
+    ],
+    answer: "HyperText Markup Language",
+    explanation: "HTML — HyperText Markup Language — is the standard language for structuring web pages.",
+  },
+  {
+    category: "Technology",
+    question: "JavaScript was originally created at which company?",
+    options: ["Microsoft", "Netscape", "Sun Microsystems", "Apple"],
+    answer: "Netscape",
+    explanation: "Brendan Eich created JavaScript at Netscape in 1995. It was initially called Mocha, then LiveScript.",
+  },
+  {
+    category: "Technology",
+    question: "What does CPU stand for?",
+    options: ["Central Process Utility", "Computer Personal Unit", "Central Processing Unit", "Core Programming Unit"],
+    answer: "Central Processing Unit",
+    explanation: "The CPU is the central processing unit — the part of a computer that executes instructions.",
+  },
+  {
+    category: "Technology",
+    question: "What is the decimal value of the binary number 1010?",
+    options: ["8", "10", "12", "15"],
+    answer: "10",
+    explanation: "1010 in binary is (1 × 8) + (0 × 4) + (1 × 2) + (0 × 1) = 10.",
+  },
+  {
+    category: "Technology",
+    question: "Which of these is a primitive data type in JavaScript?",
+    options: ["Integer", "Boolean", "Character", "Float"],
+    answer: "Boolean",
+    explanation: "JavaScript has Boolean, Number, String, BigInt, Symbol, Undefined and Null as primitive types — not Integer or Float.",
+  },
+  {
+    category: "Technology",
+    question: "In which year was the first iPhone released?",
+    options: ["2005", "2007", "2009", "2011"],
+    answer: "2007",
+    explanation: "The original iPhone was announced in January 2007 and released in June of that year.",
+  },
+
+  // ---------- Arts & Literature ----------
+  {
+    category: "Arts & Literature",
+    question: "Who wrote the play Romeo and Juliet?",
+    options: ["Charles Dickens", "William Shakespeare", "Jane Austen", "Oscar Wilde"],
+    answer: "William Shakespeare",
+    explanation: "Shakespeare wrote Romeo and Juliet in the 1590s; it remains one of his most performed plays.",
+  },
+  {
+    category: "Arts & Literature",
+    question: "Who painted the Mona Lisa?",
+    options: ["Michelangelo", "Raphael", "Leonardo da Vinci", "Vincent van Gogh"],
+    answer: "Leonardo da Vinci",
+    explanation: "Leonardo painted the Mona Lisa in the early 16th century. It hangs in the Louvre in Paris.",
+  },
+  {
+    category: "Arts & Literature",
+    question: "Which novel opens with: \"It is a truth universally acknowledged...\"?",
+    options: ["Jane Eyre", "Pride and Prejudice", "Wuthering Heights", "Great Expectations"],
+    answer: "Pride and Prejudice",
+    explanation: "That famous opening line belongs to Jane Austen's Pride and Prejudice, published in 1813.",
+  },
+  {
+    category: "Arts & Literature",
+    question: "Who composed the Ninth Symphony, which includes \"Ode to Joy\"?",
+    options: ["Mozart", "Bach", "Beethoven", "Chopin"],
+    answer: "Beethoven",
+    explanation: "Ludwig van Beethoven completed his Ninth Symphony in 1824 while almost completely deaf.",
+  },
+  {
+    category: "Arts & Literature",
+    question: "Which artist famously cut off part of his own ear?",
+    options: ["Claude Monet", "Pablo Picasso", "Vincent van Gogh", "Salvador Dalí"],
+    answer: "Vincent van Gogh",
+    explanation: "Van Gogh severed part of his left ear in 1888. He painted The Starry Night the following year.",
+  },
+  {
+    category: "Arts & Literature",
+    question: "Who wrote the novella The Old Man and the Sea?",
+    options: ["Ernest Hemingway", "F. Scott Fitzgerald", "John Steinbeck", "Mark Twain"],
+    answer: "Ernest Hemingway",
+    explanation: "Hemingway published The Old Man and the Sea in 1952; it helped earn him the Nobel Prize in Literature.",
+  },
+];
