@@ -1,53 +1,49 @@
-# Quizly
+# Quiz Application
 
-A timed, multiple-choice quiz app built with vanilla HTML, CSS, and JavaScript. No build tools or dependencies — just open `index.html` in a browser.
+Responsive quiz web application built with React.js and Tailwind CSS. Designed and developed independently, covering UI design, state management, component-based architecture and deployment on GitHub Pages.
 
-## Features
+## Project Overview
+This application lets users attempt multiple-choice questions, receive instant feedback on each answer and view a final score summary. The goal was to build a clean, user-friendly interface while applying core front-end development concepts.
 
-- **30 questions** across 5 categories: Science, History, Geography, Technology, and Arts & Literature
-- **Random rounds** — 10 questions in "All", or 6 from a single category, shuffled every time
-- **15-second timer** per question with a color-changing countdown bar
-- **Instant feedback** with an explanation after every answer
-- **Results screen** with score ring, stats, and a full answer review
-- **Personal best** saved in `localStorage`
-- **Keyboard support** — press `1`–`4` to answer, `Enter` to continue
-- **Responsive and accessible** — works on mobile, respects reduced-motion, and uses semantic markup
+## Key Features
+- Multiple-choice questions displayed one at a time
+- Instant correct/incorrect answer feedback
+- Real-time score tracking using React state
+- Result screen with final score and restart option
+- Fully responsive layout for mobile, tablet and desktop
+- Reusable, component-based code structure
 
-## Run it
+## Tech Stack
+| Category | Technologies |
+|---|---|
+| Frontend | React.js, JavaScript (ES6), HTML5, CSS3 |
+| Styling | Tailwind CSS |
+| Tools | Git, GitHub, VS Code |
+| Deployment | GitHub Pages |
 
-Open `index.html` directly, or serve the folder:
+## My Contributions
+- Designed the complete UI and responsive layout using Tailwind CSS
+- Built reusable React components and managed quiz logic with `useState` hooks
+- Implemented score calculation, answer validation and result summary
+- Tested the application across different screen sizes and browsers
+- Deployed the project on GitHub Pages
 
+## Getting Started
 ```bash
-# Python
-python -m http.server 8000
-
-# Node
-npx serve .
+git clone https://github.com/your-username/quiz-app.git
+cd quiz-app
+npm install
+npm start
 ```
+The app runs at `http://localhost:3000`.
 
-Then visit `http://localhost:8000`.
+## Future Enhancements
+- Timer for each question
+- Multiple categories and difficulty levels
+- Leaderboard with high scores
+- Fetching questions from a REST API
 
-## Files
-
-| File | Purpose |
-| --- | --- |
-| `index.html` | Markup for the start, quiz, and result screens |
-| `style.css` | Theme, layout, animations, and responsive styles |
-| `questions.js` | Question bank and explanations |
-| `script.js` | Quiz state, timer, scoring, rendering, and storage |
-
-## Add questions
-
-Append an object to `QUESTIONS` in `questions.js`:
-
-```js
-{
-  category: "Science",
-  question: "Your question?",
-  options: ["Option A", "Option B", "Option C", "Option D"],
-  answer: "Option B", // must match an option exactly
-  explanation: "Why Option B is correct.",
-}
-```
-
-New categories automatically appear as chips on the start screen.
+## Author
+**Gowripattapu Bhagyaveni**
+Frontend Developer | React.js | Tailwind CSS
+GitHub: https://github.com/bhagya147
