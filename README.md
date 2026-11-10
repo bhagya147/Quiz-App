@@ -28,15 +28,6 @@ This application lets users attempt multiple-choice questions, receive instant f
 - Tested the application across different screen sizes and browsers
 - Deployed the project on GitHub Pages
 
-## Getting Started
-```bash
-git clone https://github.com/your-username/quiz-app.git
-cd quiz-app
-npm install
-npm start
-```
-The app runs at `http://localhost:3000`.
-
 ## Future Enhancements
 - Timer for each question
 - Multiple categories and difficulty levels
